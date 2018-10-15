@@ -1,0 +1,19 @@
+measured in inches, use reference of front
+
+brick 21.75
+52.5
+window 71.75
+24.25
+window 71.75
+6 3/8
+door 40 1/8 inside frame
+3.5 to brick
+brick 16 3/4
+7
+window 71.75
+10.5
+window 71.75
+7 3/4
+brick 30
+doorwell 64.5
+brick 29 3/4
