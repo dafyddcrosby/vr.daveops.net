@@ -5,22 +5,27 @@
     %meta{charset: "utf-8"}
     %meta{name: "description", content: "VR demo"}
     %title Welcome to The Soda
-    -#%script{src: "https://aframe.io/releases/0.8.2/aframe.min.js"}
+    %script{src: "https://aframe.io/releases/0.8.2/aframe.min.js"}
     -# Tired of waiting for 0.9.0 to come out, would like the Oculus Go controls that have been in master for months now
-    %script{src: "https://cdn.jsdelivr.net/gh/aframevr/aframe@ab7e2fcc2b4e95a819c0f85d9f34ab9c42bf66cc/dist/aframe-master.min.js"}
+    -#%script{src: "https://cdn.jsdelivr.net/gh/aframevr/aframe@ab7e2fcc2b4e95a819c0f85d9f34ab9c42bf66cc/dist/aframe-master.min.js"}
     %script{src: "https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"}
   %body
     %a-entity{"oculus-go-controls": true}
     %a-scene{background: "color: black",
       "keyboard-shortcuts": "enterVR: true",
-      "vr-mode-ui": "enabled: true"}
-      -#stats: true}
+      "vr-mode-ui": "enabled: true",
+      stats: false}
+      -# Set up the camera
+      -#%a-entity{position: "0 1.8 0"}
+      -#  %a-entity{camera: true, "look-controls": true, "wasd-controls": true}
+      %a-entity{"movement-controls": "fly: false", position: "0 0 0"}
+        %a-entity{camera: true, position: "0 1.6 0"}
       -# TODO Create the floor
         -# Floor was tiled
       %a-plane{position: "0 0 0", rotation: "-90 0 0", width: "12.1285", height: "20", color: "gray"}
       -# TODO Create the walls/exterior
         -# Don't forget the door at the right of the facade
-        -# TODO get exact building dimensions
+        -# TODO get exact building length dimensions
         -# The interior walls were all black, IIRC - was always dark
       -# %a-box{position: "0 3 -10",
       -#   height: 6,
@@ -91,8 +96,3 @@
         -# Toilet always broken, covered with plastic bag
         -# Urinal always broken, constant flushing
         -# Mirror, sink
-      -# Set up the camera
-      -#%a-entity{position: "0 1.8 0"}
-      -#  %a-entity{camera: true, "look-controls": true, "wasd-controls": true}
-      %a-entity{"movement-controls": "fly: false", position: "0 0 0"}
-        %a-entity{camera: true, position: "0 1.6 0"}
