@@ -1,4 +1,5 @@
 sync: build
-	rsync index.html lonesomecosmonaut:vr.daveops.net/
+	rsync *.html vr.daveops.net:vr.daveops.net/
 build:
-	haml index.haml index.html
+	bundle exec haml index.haml index.html
+	bundle exec haml soda.haml soda.html
