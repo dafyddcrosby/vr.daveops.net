@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'haml'
+gem "haml"
 group :development, optional: true do
-  gem 'dc-devtools'
+  gem "dc-devtools", "~> 0.1"
 end
